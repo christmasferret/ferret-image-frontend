@@ -112,7 +112,7 @@ p {
 .page-header {
     padding-bottom: 9px;
     margin: 10px 0 20px;
-    /*border-bottom: 1px solid transparent;*/
+    border-bottom: 1px solid transparent;
     text-align: center;
     font-family: monospace, serif,sans-serif, Helvetica,Arial;
     color: #1ebfae;
