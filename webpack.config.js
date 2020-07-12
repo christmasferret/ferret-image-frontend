@@ -11,7 +11,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         publicPath: WEBPACK_ENV === 'dev' 
-            ? '/dist/' : '//s.ferretninja.com/ferret-image-fe/dist/',
+            ? '/dist/' : '//s.ferretninja.com/image-hosting-fe/dist/',
         filename: 'js/app.js'
     },
     resolve: {
