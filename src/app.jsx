@@ -1,32 +1,38 @@
-import React            from 'react';
-import ReactDOM         from 'react-dom';
-import { BrowserRouter as Router, Switch, Redirect, Route, Link } from 'react-router-dom'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {BrowserRouter as Router, Switch, Redirect, Route, Link} from 'react-router-dom'
 
-import Layout           from 'component/layout/index.jsx';
+import Layout from 'component/layout/index.jsx';
 // 页面
-import Home             from 'page/home/index.jsx';
+import Home from 'page/home/index.jsx';
+import Footer from "component/footer/index.jsx";
 
-class App extends React.Component{
-    render(){
+class App extends React.Component {
+    render() {
         let LayoutRouter = (
-            <Layout> 
+            <Layout>
                 <Switch>
                     <Route exact path="/" component={Home}/>
                 </Switch>
             </Layout>
         );
         return (
-            <Router>
-                <Switch>
-                    <Route path="/" render={ props => LayoutRouter}/>
-                </Switch>
-            </Router>
+            <div id="page-container">
+                <div id="content-wrap">
+                    <Router>
+                        <Switch>
+                            <Route path="/" render={props => LayoutRouter}/>
+                        </Switch>
+                    </Router>
+                </div>
+                <Footer/>
+            </div>
         )
     }
 }
 
 
 ReactDOM.render(
-    <App />,
+    <App/>,
     document.getElementById('app')
 );

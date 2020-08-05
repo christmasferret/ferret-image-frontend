@@ -1,3 +1,12 @@
+#page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#content-wrap {
+    flex: 1;
+}
 
 .color-box{
     display: block;
@@ -96,6 +105,13 @@ $sub-img-size: 130px;
         .fa-close{
             display: block;
         }
+    }
+
+    .index-module-foot {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        background-color: #000;
     }
 }
 

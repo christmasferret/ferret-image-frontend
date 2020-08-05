@@ -7,6 +7,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 let WEBPACK_ENV = process.env.WEBPACK_ENV || 'dev';
 console.log(WEBPACK_ENV); 
 module.exports = {
+    devtool: 'source-map',
     entry: './src/app.jsx',
     output: {
         path: path.resolve(__dirname, 'dist'),
